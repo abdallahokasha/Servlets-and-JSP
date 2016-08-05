@@ -1,0 +1,16 @@
+This Simple Web app using Servlets & JSP .. Just my First Example learning about JavaEE
+
+
+-----------------------------------------------------------
+…or create a new repository on the command line
+
+echo "# Servlets-JSP" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/okasha93/Servlets-JSP.git
+git push -u origin master
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/okasha93/Servlets-JSP.git
+git push -u origin master
