@@ -3,11 +3,13 @@ package org.okahsa;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class SimpleServlet
@@ -35,7 +37,18 @@ public class SimpleServlet extends HttpServlet {
 	    response.setContentType("text/html");
 	    String name = request.getParameter("UserName"); 
 	    //response.getWriter().println("<h3>Hello in HTML</h3>");
+	    ServletContext context = request.getServletContext();
 	    out.println("From GET method .. Hello! " + name);
+	    HttpSession session = request.getSession();
+	    String tmp="", tmp2="";
+	    session.setAttribute("SaveUserName", name);
+	    context.setAttribute("saveUserName", name);
+	    if (name!="" && name!=null){
+	    tmp= (String)session.getAttribute("SaveUserName");}
+	    if (name!="" && name!=null){
+		    tmp2= (String)context.getAttribute("SaveUserName");}
+	    out.println("Session Parameter as userName is " + tmp);
+	    out.println("Context Parameter as userName is " + tmp);
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
