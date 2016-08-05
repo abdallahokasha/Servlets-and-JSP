@@ -1,3 +1,4 @@
 #Tomcat publish data
-#Fri Aug 05 15:53:09 EET 2016
+#Fri Aug 05 16:17:07 EET 2016
+org.eclipse.jst.jee.server\:OnlineShop=/home/okasha/apache-tomcat-8.0.36/wtpwebapps/OnlineShop
 org.eclipse.jst.jee.server\:SimpleServletProject=/home/okasha/apache-tomcat-8.0.36/wtpwebapps/SimpleServletProject

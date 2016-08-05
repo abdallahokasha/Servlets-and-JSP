@@ -6,7 +6,7 @@
 </head>
 <body>
 
-	<form method="get" action="SimpleServletPath">
+	<form method="post" action="SimpleServletPath">
 	User Name:<input name="UserName" /> 
 	<br>
 	Full Name:<input name="fullName"/>
