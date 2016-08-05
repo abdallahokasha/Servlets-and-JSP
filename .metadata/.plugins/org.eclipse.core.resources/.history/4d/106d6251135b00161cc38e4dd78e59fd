@@ -19,7 +19,6 @@
 	<option value="Cairo"> cairo</option>
 	<option value="Alex"> alex</option>
 	<option value="Tanta"> tanta</option>
-	<option value="Giza"> giza</option>
 	</select>
 	<input type="submit" />
 	</form>

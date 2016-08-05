@@ -52,8 +52,7 @@ public class SimpleServlet extends HttpServlet {
 	    out.println("Form Post Method .. Hello! " + userName + " \n" + fullName);
 	    out.println("You are a " + prof);
 	    String[] location = request.getParameterValues("location");
-	    for (int i=0;i<location.length;++i)
-	    	out.println("YOu are in " + location[i]);
+	    out.println("You are in " + location);
 	}
 
 }
