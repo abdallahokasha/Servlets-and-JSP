@@ -7,7 +7,7 @@
 <title>Clock</title>
 </head>
 <body>
-<%@ include file="/Hello.jsp" %>
+<%include file="Hello.jsp" %>
 <b>The time is: <%=new Date()%> </b> 
 </body>
 </html>
