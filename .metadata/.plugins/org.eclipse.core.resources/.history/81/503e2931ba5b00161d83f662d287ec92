@@ -1,0 +1,8 @@
+package org.okasha.service;
+
+public class SigninService {
+
+	public boolean authenticate(String userName, String password){
+		
+	}
+}
