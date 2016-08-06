@@ -23,7 +23,7 @@ The user in session object is : <%=session.getAttribute("sessionUserName") %>
 <br>
 The user in the application object is: <%=application.getAttribute("ApplicationUserName") %>
 <br>
-The user in the Page context object is: <%=pageContext.getAttribute("pageContextName") %>
+The user in the Page context object is: <%=application.getAttribute("ApplicationUserName") %>
 
 
 </body>
