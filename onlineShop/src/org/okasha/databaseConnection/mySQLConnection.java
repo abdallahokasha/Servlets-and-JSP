@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Logger;
 
-class mySQLConnection {
+public class mySQLConnection {
     private Connection con;
 
     public mySQLConnection() {
