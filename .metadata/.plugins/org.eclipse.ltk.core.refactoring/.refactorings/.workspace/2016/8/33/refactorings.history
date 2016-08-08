@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;onlineShop/src/org/okasha/DBConnection&apos;" deleteContents="false" description="Delete resource &apos;onlineShop/src/org/okasha/DBConnection&apos;" element1="/onlineShop/src/org/okasha/DBConnection" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1470598625584"/>
+</session>

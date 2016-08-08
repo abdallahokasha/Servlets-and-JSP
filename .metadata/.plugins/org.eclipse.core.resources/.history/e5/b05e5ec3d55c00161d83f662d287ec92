@@ -1,0 +1,53 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package org.okasha.DBConnection;
+
+
+import java.sql.*;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class Connection {
+
+    private Connection con;
+
+    public Connection() {
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/watanaya", "root", "");
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(Connection.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
+    public Boolean execute(String q) {
+        int row = 0;
+        try {
+            Statement stmt = con.createStatement();
+            row = stmt.executeUpdate(q);
+            stmt.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(Connection.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return (row != 0);
+    }
+
+    public Connection getCon() {
+        return this.con;
+    }
+
+    public void close() {
+        try {
+            con.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(Connection.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+}

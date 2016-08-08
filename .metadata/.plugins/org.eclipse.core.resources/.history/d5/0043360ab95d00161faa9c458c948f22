@@ -1,0 +1,8 @@
+package org.okasha.model;
+
+public class Category {
+private Name;
+public getName(String Name){
+	return Name;
+}
+}

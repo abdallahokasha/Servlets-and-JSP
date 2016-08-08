@@ -7,11 +7,14 @@
 <title>Signin Page</title>
 </head>
 <body>
-<form action="SigninServlet" method="post">
-<br>UserName:<input type="text" name="UserName"/>
-<br>Password:<input type="password" name="Password"/>
-<br><input type="submit">
-
+<h2> Online Shop </h2><br>
+<center> 
+<h2> Sign in </h2><br>
+</center>>
+<form action="Register" method="post">
+<strong>Email</strong>:<input type="text" name="email"><br>
+<strong>Password</strong>:<input type="password" name="name"><br>
+<input type="submit" value="Sign in"><br>
 </form>
 
 </body>

@@ -1,0 +1,6 @@
+package org.okasha.model;
+
+public class Product {
+private String Name;
+private int Price;
+}

@@ -1,0 +1,41 @@
+package org.okasha.databaseConnection;
+
+import java.sql.*;
+
+class mySQLConnection {
+    private Connection con;
+
+    public mySQLConnection() {
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/watanaya", "root", "");
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(mySQLConnection.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
+    public Boolean execute(String q) {
+        int row = 0;
+        try {
+            Statement stmt = con.createStatement();
+            row = stmt.executeUpdate(q);
+            stmt.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(Operation.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return (row != 0);
+    }
+
+    public Connection getCon() {
+        return this.con;
+    }
+
+    public void close() {
+        try {
+            con.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(Operation.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+}

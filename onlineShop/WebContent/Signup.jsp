@@ -7,6 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<h2> Online Shop </h2><br>
+<center> 
+<h2> Sign up </h2><br>
+</center>>
+<form action="Register" method="post">
+<strong>Email</strong>:<input type="text" name="email"><br>
+<strong>Name</strong>:<input type="text" name="name"><br>
+<strong>Password</strong>:<input type="password" name="name"><br>
+<strong>Address</strong>:<input type="text" name="address"><br>
+<input type="submit" value="Sign up"><br>
+</form>
 </body>
 </html>
