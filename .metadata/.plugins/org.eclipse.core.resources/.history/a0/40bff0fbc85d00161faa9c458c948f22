@@ -1,0 +1,23 @@
+package org.okasha.model;
+
+import org.okasha.databaseConnection.mySQLConnection;
+
+public class Category {
+private String Name;
+public void setName(String name) {
+	Name = name;
+}
+public String getName(String name){
+	return name;
+}
+public boolean insertCategory() {
+	mySQLConnection conc = new mySQLConnection();
+	boolean f = conc
+			.execute("INSERT INTO `OnlineShop`.`Category`(`Name`)VALUES ('"
+					+ Name + "')");
+	conc.close();
+	return f;
+}
+
+
+}

@@ -1,0 +1,30 @@
+package org.okasha.model;
+
+import org.okasha.databaseConnection.mySQLConnection;
+
+public class Product {
+private String Name;
+private int Price;
+public String getName() {
+	return Name;
+}
+public void setName(String name) {
+	Name = name;
+}
+public int getPrice() {
+	return Price;
+}
+public void setPrice(int price) {
+	Price = price;
+}
+public boolean insertProduct() {
+	mySQLConnection conc = new mySQLConnection();
+	boolean f = conc
+			.execute("INSERT INTO `OnlineShop`.`Product`(`Email`,`Name`,`Mobile_No`,`Address`, `Password`)VALUES ('"
+					+ Email + "', '" + Name + "', '" + MobileNo + "', '" + Address + "', '" + Password + "')");
+	conc.close();
+	return f;
+}
+
+
+}
