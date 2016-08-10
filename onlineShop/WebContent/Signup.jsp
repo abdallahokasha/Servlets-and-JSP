@@ -11,11 +11,12 @@
 <center> 
 <h2> Sign up </h2><br>
 </center>>
-<form action="Register" method="post">
-<strong>Email</strong>:<input type="text" name="email"><br>
-<strong>Name</strong>:<input type="text" name="name"><br>
-<strong>Password</strong>:<input type="password" name="name"><br>
-<strong>Address</strong>:<input type="text" name="address"><br>
+<form action="Signup" method="post">
+<strong>Email</strong>:<input type="text" name="Email"><br>
+<strong>Name</strong>:<input type="text" name="Name"><br>
+<strong>Mobile No.</strong>:<input type="text" name="MobileNo"><br>
+<strong>Address</strong>:<input type="text" name="Address"><br>
+<strong>Password</strong>:<input type="password" name="Password"><br>
 <input type="submit" value="Sign up"><br>
 </form>
 </body>

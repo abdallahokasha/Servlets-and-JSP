@@ -1,6 +1,8 @@
 package org.okasha.model;
 
 import org.okasha.databaseConnection.*;
+
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -79,7 +81,14 @@ public class User {
 			op.close();
 		} catch (SQLException ex) {
 			Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
-		}
+		} 
 		return isExisted;
+	}
+	public boolean getAllUsers() {
+		mySQLConnection conc = new mySQLConnection();
+		boolean f = conc.execute("SELECT * FROM User");
+		
+		conc.close();
+		return f;
 	}
 }

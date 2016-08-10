@@ -13,7 +13,7 @@ public class mySQLConnection {
     public mySQLConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:80/watanaya", "root", "");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/OnlineShop", "root", "");
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(mySQLConnection.class.getName()).log(Level.SEVERE, null, ex);
         }
