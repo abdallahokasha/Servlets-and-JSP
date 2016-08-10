@@ -17,7 +17,6 @@ public class mySQLConnection {
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(mySQLConnection.class.getName()).log(Level.SEVERE, null, ex);
         }
-
     }
 
     public Boolean execute(String q) {

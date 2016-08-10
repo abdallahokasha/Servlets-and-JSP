@@ -10,7 +10,7 @@
 <h2> Online Shop </h2><br>
 <center> 
 <h2> Sign up </h2><br>
-</center>>
+</center>
 <form action="Signup" method="post">
 <strong>Email</strong>:<input type="text" name="Email"><br>
 <strong>Name</strong>:<input type="text" name="Name"><br>

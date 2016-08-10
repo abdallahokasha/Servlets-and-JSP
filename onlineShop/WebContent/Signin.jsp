@@ -10,10 +10,10 @@
 <h2> Online Shop </h2><br>
 <center> 
 <h2> Sign in </h2><br>
-</center>>
-<form action="Register" method="post">
-<strong>Email</strong>:<input type="text" name="email"><br>
-<strong>Password</strong>:<input type="password" name="name"><br>
+</center>
+<form action="Signin" method="post">
+<strong>Email</strong>:<input type="text" name="Email"><br>
+<strong>Password</strong>:<input type="password" name="Name"><br>
 <input type="submit" value="Sign in"><br>
 </form>
 

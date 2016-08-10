@@ -29,5 +29,10 @@ public class Product {
 		conc.close();
 		return f;
 	}
-
+	public boolean getAllProduct() {
+		mySQLConnection conc = new mySQLConnection();
+		boolean f = conc.execute("SELECT * FROM Product");
+		conc.close();
+		return f;
+	}
 }
