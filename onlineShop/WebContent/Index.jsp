@@ -7,6 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<h2>Online Shop</h2>
+	<h3>
+		<a href="Signin.jsp">Sign in</a>
+	</h3>
+	<h3>
+		<a href="Signup.jsp">Sign up</a>
+	</h3>
 </body>
 </html>

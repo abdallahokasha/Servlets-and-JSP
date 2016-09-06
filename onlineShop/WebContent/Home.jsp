@@ -8,10 +8,22 @@
 </head>
 <body>
 	<h2>Online Shop</h2>
-	<br>
-
-	<h3>Home</h3>
-	<br>
-
+	<h3>
+		<a href="Home.jsp">Home</a>
+	</h3>
+	<h3>
+		<a href="MyProfile.jsp">My Profile</a>
+	</h3>
+	<h3>
+		<a href="NewOrder.jsp">New Order</a>
+	</h3>
+	<h3>
+		<a href="MyOrders.jsp">My Orders</a>
+	</h3>
+	
+	<h3>
+		<a href="Index.jsp">Sign out</a>
+	</h3>
+	
 </body>
 </html>

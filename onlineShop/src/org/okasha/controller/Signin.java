@@ -10,33 +10,38 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.okasha.model.*;
+
 /**
  * Servlet implementation class Signin
  */
 @WebServlet("/Signin")
 public class Signin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Signin() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public Signin() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
@@ -45,13 +50,14 @@ public class Signin extends HttpServlet {
 		User user = new User();
 		user.setEmail(email);
 		user.setPassword(password);
-		if(user.validateUser())
-		{
-			RequestDispatcher rd = request.getRequestDispatcher("Home.jsp");
+		if (user.validateUser()) {
+			RequestDispatcher rd;
+			if (email == "admin@xy.com" && password == "123")
+				rd = request.getRequestDispatcher("Admin.jsp");
+			else
+				rd = request.getRequestDispatcher("Home.jsp");
 			rd.forward(request, response);
-		}
-		else
-		{
+		} else {
 			RequestDispatcher rd = request.getRequestDispatcher("registration.jsp");
 			out.println("<font color=red>Incorrect Email or Password</font>");
 			rd.include(request, response);
