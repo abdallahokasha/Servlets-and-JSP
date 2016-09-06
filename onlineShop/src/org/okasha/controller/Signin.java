@@ -52,7 +52,7 @@ public class Signin extends HttpServlet {
 		user.setPassword(password);
 		if (user.validateUser()) {
 			RequestDispatcher rd;
-			if (email == "admin@xy.com" && password == "123")
+			if (email.equals("admin@xy.com") && password.equals("123"))
 				rd = request.getRequestDispatcher("Admin.jsp");
 			else
 				rd = request.getRequestDispatcher("Home.jsp");
