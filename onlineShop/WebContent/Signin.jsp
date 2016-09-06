@@ -13,7 +13,7 @@
 </center>
 <form action="Signin" method="post">
 <strong>Email</strong>:<input type="text" name="Email"><br>
-<strong>Password</strong>:<input type="password" name="Name"><br>
+<strong>Password</strong>:<input type="password" name="Password"><br>
 <input type="submit" value="Sign in"><br>
 </form>
 

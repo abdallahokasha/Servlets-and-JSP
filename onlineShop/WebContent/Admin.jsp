@@ -7,6 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<h2> Online Shop </h2><br>
+<center> 
+<h2> Admin Sign in </h2><br>
+</center>
+<form action="Signin" method="post">
+<strong>UserName</strong>:<input type="text" name="UserName"><br>
+<strong>Password</strong>:<input type="password" name="Password"><br>
+<input type="submit" value="Sign in"><br>
+</form>
 </body>
 </html>

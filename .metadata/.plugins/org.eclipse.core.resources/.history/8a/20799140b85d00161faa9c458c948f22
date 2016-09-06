@@ -1,5 +1,0 @@
-package org.okasha.model;
-
-public class User {
-private String name, Email, Address;
-}

@@ -40,10 +40,10 @@ public class Signin extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		String name = request.getParameter("Name");
+		String email = request.getParameter("Email");
 		String password = request.getParameter("Password");
 		User user = new User();
-		user.setName(name);
+		user.setEmail(email);
 		user.setPassword(password);
 		if(user.validateUser())
 		{
@@ -52,7 +52,6 @@ public class Signin extends HttpServlet {
 		}
 		else
 		{
-
 			RequestDispatcher rd = request.getRequestDispatcher("registration.jsp");
 			out.println("<font color=red>Incorrect Email or Password</font>");
 			rd.include(request, response);

@@ -51,10 +51,11 @@ public class Order {
 		conc.close();
 		return f;
 	}
+
 	public boolean getUserOrders() {
 		mySQLConnection conc = new mySQLConnection();
-		//Edit needed here
-		//boolean f = conc.execute("SELECT * FROM Orders");
+		// Edit needed here
+		boolean f = conc.execute("SELECT * FROM Orders");
 		conc.close();
 		return f;
 	}

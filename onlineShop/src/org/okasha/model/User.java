@@ -66,7 +66,7 @@ public class User {
 		try {
 			mySQLConnection op = new mySQLConnection();
 			Statement stmt = op.getCon().createStatement();
-			ResultSet user = stmt.executeQuery("SELECT * FROM `OnlineShop`.`User` WHERE `Name` = '" + Name
+			ResultSet user = stmt.executeQuery("SELECT * FROM `OnlineShop`.`User` WHERE `Email` = '" + Email
 					+ "' AND `Password` = '" + Password + "' ");
 			if (user.next()) {
 				Email = user.getString("Email");
@@ -81,13 +81,14 @@ public class User {
 			op.close();
 		} catch (SQLException ex) {
 			Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
-		} 
+		}
 		return isExisted;
 	}
+
 	public boolean getAllUsers() {
 		mySQLConnection conc = new mySQLConnection();
 		boolean f = conc.execute("SELECT * FROM User");
-		
+
 		conc.close();
 		return f;
 	}

@@ -19,5 +19,12 @@ public class Category {
 		conc.close();
 		return f;
 	}
-    
+
+	public boolean getAllCategories() {
+		mySQLConnection conc = new mySQLConnection();
+		boolean f = conc.execute("SELECT * FROM Category");
+		conc.close();
+		return f;
+	}
+
 }

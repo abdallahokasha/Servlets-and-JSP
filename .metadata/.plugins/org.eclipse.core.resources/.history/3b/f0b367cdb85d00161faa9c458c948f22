@@ -1,5 +1,0 @@
-package org.okasha.model;
-
-public class Order {
-private String OrderID, Payment_Method, Delivery_Address, OrderStatus;
-}
