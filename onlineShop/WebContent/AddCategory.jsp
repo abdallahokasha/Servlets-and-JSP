@@ -7,6 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<h2> Online Shop </h2><br>
+<center> 
+<h2> Admin </h2><br>
+</center>
+<form action="AddCategory" method="post">
+<strong>Category Name</strong>:<input type="text" name="Name"><br>
+<input type="submit" value="Add Category"><br>
+</form>
 </body>
 </html>

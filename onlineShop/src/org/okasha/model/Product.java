@@ -1,10 +1,18 @@
 package org.okasha.model;
 
 import org.okasha.databaseConnection.mySQLConnection;
-
 public class Product {
 	private String Name;
+	private String CategoryName;
+	public String getCategoryName() {
+		return CategoryName;
+	}
+
+	public void setCategoryName(String categoryName) {
+		CategoryName = categoryName;
+	}
 	private int Price;
+	
 
 	public String getName() {
 		return Name;
@@ -25,7 +33,7 @@ public class Product {
 	public boolean insertProduct() {
 		mySQLConnection conc = new mySQLConnection();
 		boolean f = conc
-				.execute("INSERT INTO `OnlineShop`.`Product`(`Name`,`Price`)VALUES ('" + Name + "', '" + Price + "')");
+				.execute("INSERT INTO `OnlineShop`.`Product`(`Name`,`Price`)VALUES ('" + Name + "', '" + Price + "', '" + CategoryName + "')");
 		conc.close();
 		return f;
 	}
