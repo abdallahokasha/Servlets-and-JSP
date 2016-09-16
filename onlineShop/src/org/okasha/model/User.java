@@ -54,9 +54,9 @@ public class User {
 
 	public boolean insertUser() {
 		mySQLConnection conc = new mySQLConnection();
-		boolean f = conc
-				.execute("INSERT INTO `OnlineShop`.`User`(`Email`,`Name`,`Mobile_No`,`Address`, `Password`)VALUES ('"
-						+ Email + "', '" + Name + "', '" + MobileNo + "', '" + Address + "', '" + Password + "')");
+		boolean f = conc.execute(
+				"INSERT INTO OnlineShop.User(Email, Name, Mobile_No," + " Address," + " Password)" + "VALUES ('" + Email
+						+ "', '" + Name + "', '" + MobileNo + "', '" + Address + "', '" + Password + "')");
 		conc.close();
 		return f;
 	}
@@ -66,8 +66,8 @@ public class User {
 		try {
 			mySQLConnection op = new mySQLConnection();
 			Statement stmt = op.getCon().createStatement();
-			ResultSet user = stmt.executeQuery("SELECT * FROM `OnlineShop`.`User` WHERE `Email` = '" + Email
-					+ "' AND `Password` = '" + Password + "' ");
+			ResultSet user = stmt.executeQuery("SELECT * FROM OnlineShop.User WHERE Email = '" + Email
+					+ "' AND Password = '" + Password + "' ");
 			if (user.next()) {
 				Email = user.getString("Email");
 				Name = user.getString("Name");
@@ -88,7 +88,13 @@ public class User {
 	public boolean getAllUsers() {
 		mySQLConnection conc = new mySQLConnection();
 		boolean f = conc.execute("SELECT * FROM User");
+		conc.close();
+		return f;
+	}
 
+	public boolean userData() {
+		mySQLConnection conc = new mySQLConnection();
+		boolean f = conc.execute("SELECT * FROM User where Email=" + Email);
 		conc.close();
 		return f;
 	}

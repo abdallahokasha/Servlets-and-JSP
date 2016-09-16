@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<form action="MyProfile" method="post">
+</form>
 </body>
 </html>
